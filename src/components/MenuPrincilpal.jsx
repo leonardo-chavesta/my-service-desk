@@ -1,10 +1,18 @@
 import imgMenu from "../templates/img/menu-img.jpg";
 import menuLogo from "../templates/img/data.jpg";
-import Home from "../views/home/inicio";
+import Hor from "../views/home/inicio" 
 import "../templates/styles/nav.css";
 
+
 const MenuPrincipal = () => {
-  return (
+
+const alert = () => {
+  console.log("HOla");
+}
+
+
+
+return (
     <>
       <div className="contenedor">
         <div className="header__container">
@@ -23,8 +31,22 @@ const MenuPrincipal = () => {
             </ul>
           </div>
         </div>
+
+
       </div>
-      <Home />
+      <Hor />
+     <Hor />
+     <Hor />
+     <Hor />
+     <Hor />
+     <Hor />
+     <Hor />
+     <Hor />
+     <Hor />
+     <Hor />
+     <Hor />
+     <Hor />
+     
 
     </>
   );
