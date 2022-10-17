@@ -2,6 +2,7 @@ import imgMenu from "../templates/img/menu-img.jpg";
 import menuLogo from "../templates/img/data.jpg";
 import Home from "../views/home/inicio";
 import "../templates/styles/nav.css";
+import Registro from "../views/registro/registro";
 
 const MenuPrincipal = () => {
   return (
@@ -24,7 +25,7 @@ const MenuPrincipal = () => {
           </div>
         </div>
       </div>
-      <Home />
+      <Registro />
 
     </>
   );
