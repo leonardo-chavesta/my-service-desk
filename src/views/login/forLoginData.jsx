@@ -7,7 +7,7 @@ const ForLoginData = () => {
   }
   return (
     <div>
-      <h1>Visitaste mi pagina hola</h1>
+      <h1>Visitaste mi pagina</h1>
     </div>
   );
 };
