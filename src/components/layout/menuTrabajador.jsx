@@ -15,6 +15,7 @@ import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import Detalle from "../../views/Detalle/detalle"
 
 const LayoutPanelDeControl = () => {
   return (
@@ -50,6 +51,8 @@ const LayoutPanelDeControl = () => {
           </div>
         </header>
       </div>
+
+      <Detalle />
     </>
   );
 };
