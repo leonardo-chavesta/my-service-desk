@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { Image } from "react-bootstrap";
 
 
 const ForLoginData = () => {

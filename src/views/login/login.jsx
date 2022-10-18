@@ -1,3 +1,4 @@
+
 import '../registro/estiloRegistro.css'
 import city from '../../templates/img/city.jpg'
 
@@ -8,12 +9,11 @@ const Login = () => {
       <div class="row align-items-stretch">
         <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded"></div>
         <div class="col bg-white p-5 rounded-end">
-          <div class="text-end">
+          <div className="cityimg">
             <img
-              class="cat"
+              class="cityimg"
               src={city}
-              width="48"
-              alt=""
+              className="rounded"
             />
           </div>
           <h2 class="fw-bold tex-center py-5">Bienvenidos</h2>
@@ -43,19 +43,19 @@ const Login = () => {
               </label>
             </div>
 
-            <div class="d-grid">
-              <button type="submit" class="btn btn-primary">
-                <a href="menuU.html">Iniciar Sesión</a>
+            <div className="d-grid">
+              <button className='btn btn-primary'>
+                Iniciar Sesión
               </button>
             </div>
 
             <div class="my-3">
               <span>
-                No tienes cuenta?&nbsp;<a href="#">Registrate</a>
+                No tienes cuenta?&nbsp;<a className='text-primary' href="#"> Registrate</a>
               </span>{" "}
               <br />
               <span>
-                <a href="#">Recuperar Contraseña</a>
+                <a href="#"><p className='text-primary'>Recuperar Contraseña</p></a>
               </span>
             </div>
           </form>
