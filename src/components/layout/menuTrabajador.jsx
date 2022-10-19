@@ -6,7 +6,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Listado from "../../views/listadoTablas/listadoUsuario";
 import Detalle from "../../views/Detalle/detalle";
-import RoterVista from "./RoterVistas";
+import Registro from "../../views/registro/registro";
 
 const LayoutPanelDeControl = () => {
   return (
@@ -59,7 +59,8 @@ const LayoutPanelDeControl = () => {
         </header>
       </div>
       <Listado />
-      <Detalle /> 
+      <Detalle />
+      <Registro /> 
     </>
   );
 };
