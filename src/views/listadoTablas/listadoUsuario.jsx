@@ -1,18 +1,20 @@
 
+import ReactTable from "../../components/ReactTable/reactTable";
+
 const Listado = () => {
   
       const COLUMNAS = [
         {
-            title:"Nombre",
-            field:'name',
+          Header: 'Nombre',
+          accessor: 'name',
         },
         {
-            title:"Apellido",
-            field:'apellido',
+          Header: 'Apellido',
+          accessor: 'apellido',
         },
         {
-            title:"Edad",
-            field:'edad',
+          Header: 'Edad',
+          accessor: 'edad',
         },
       ]
 
@@ -35,8 +37,13 @@ const Listado = () => {
 
     return(
         <>
-        <h1>HOla mundo</h1>
         
+        <ReactTable 
+        
+        columns={COLUMNAS}
+        data={listadoTablas || []}
+        
+        />
         </>
     );
 }
