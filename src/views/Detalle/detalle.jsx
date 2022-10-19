@@ -1,14 +1,14 @@
+
 import form from "react-bootstrap/Form";
 import { Row, Col, Form } from "react-bootstrap";
 import "../../App.css"
 import Button from 'react-bootstrap/Button';
 
 
-
-
 const Detalle = () => {
   return (
     <>
+
      
       <Row className="g-3 contenedor " >
         <Col xs={12} sm={4} md={8} lg={6}>
@@ -106,7 +106,7 @@ const Detalle = () => {
           </Row>
         </Col>
       </Row>
-      
+     
     </>
   );
 };

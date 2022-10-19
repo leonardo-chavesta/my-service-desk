@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { Image } from "react-bootstrap";
 
 
 const ForLoginData = () => {
@@ -7,7 +8,7 @@ const ForLoginData = () => {
   }
   return (
     <div>
-      <h1>Visitaste mi pagina</h1>
+      <h1>Visitaste mi pagina hola</h1>
     </div>
   );
 };
