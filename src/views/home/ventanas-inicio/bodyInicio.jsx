@@ -63,9 +63,6 @@ const bodyInicio = () => (
           </div>
         </div>
       </div>
-
-
-
       <div className="seccion_1">
           <div className="hover">
             <div className="seccion1__div">
@@ -93,9 +90,7 @@ const bodyInicio = () => (
               </div>
           </div>
           </div>
-      </div>
-
-      
+      </div>    
     </div>
     <InformacionAdicional />
     <br />
