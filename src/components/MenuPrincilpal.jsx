@@ -35,7 +35,7 @@ const MenuPrincipal = () => {
               <li>
                 <Link to="/login">
                   <Button variant="danger" active >
-                    Login Servicio
+                    Login
                   </Button>
                 </Link>
               </li>
