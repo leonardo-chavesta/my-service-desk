@@ -10,6 +10,10 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Detalle from "../../views/Detalle/detalle"
 
 const LayoutPanelDeControl = () => {
+
+
+
+
   return (
     <>
     <Navbar className=" py-9 px-20  " bg="light" expand="lg">
@@ -43,6 +47,8 @@ const LayoutPanelDeControl = () => {
           </div>
         </header>
       </div>
+
+
       <Listado />
     </>
   );
