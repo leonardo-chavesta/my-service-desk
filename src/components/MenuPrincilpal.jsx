@@ -1,4 +1,5 @@
 import "../templates/styles/nav.css";
+import Registro from "../views/registro/registro";
 import Home from "../views/home/home";
 import { Route, Link, Routes, NavLink, useParams } from "react-router-dom";
 import { Button } from "react-bootstrap";
@@ -40,6 +41,7 @@ const MenuPrincipal = () => {
           </div>
         </div>
       </div>
+      <Registro />
       <Home />
     </>
   );
