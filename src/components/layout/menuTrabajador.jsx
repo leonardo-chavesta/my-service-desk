@@ -1,14 +1,6 @@
 import { Link, Route,Routes } from "react-router-dom";
 import "../../App.css";
-import {
-  faCaretDown,
-  faUser,
-  faBullhorn,
-  faTicketAlt,
-  faCheckCircle,
-  faCalendar,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
@@ -52,7 +44,6 @@ const LayoutPanelDeControl = () => {
         </header>
       </div>
 
-      <Detalle />
     </>
   );
 };

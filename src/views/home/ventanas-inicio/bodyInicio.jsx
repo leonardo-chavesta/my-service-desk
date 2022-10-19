@@ -5,6 +5,8 @@ import img3 from "../../../templates/img/iconos/3.jpg";
 import img4 from "../../../templates/img/iconos/4.jpg";
 import img5 from "../../../templates/img/iconos/5.jpg";
 import img6 from "../../../templates/img/iconos/6.jpg";
+import InformacionAdicional from "./InformacionAdicionl";
+import Footer from "./footer";
 
 const bodyInicio = () => (
   <>
@@ -25,59 +27,81 @@ const bodyInicio = () => (
 
     <h1 className="container_h2_body">
       {" "}
-      Construido para potenciar su help desk de TI
+      Construido para potenciar su Service desk de TI
     </h1>
-    
+
     <div className="seccion__potencial">
+
       <div className="seccion_1">
-        <div className="seccion1__div">
-          <div>
-            <img src={img1} alt="" />
-          </div>
-          <div>
-            <p>Nuestro Equipo con las</p>
-            <p>mejores prácticas</p>
-          </div>
-        </div>
-        <div className="seccion1__div">
-          <img src={img2} alt="" />
-          <div>
-            <p>Potentes integraciones</p>
-            <p>para administración de TI</p>
+        <div className="hover">
+          <div className="seccion1__div">
+            <div>
+              <img src={img1} alt="" />
+            </div>
+            <div>
+              <p>Nuestro Equipo con las</p>
+              <p>mejores prácticas</p>
+            </div>
           </div>
         </div>
-        <div className="seccion1__div">
-          <img src={img3} alt="" />
-          <div>
-            <p>Rapidos para una</p>
-            <p>mejor Automatización</p>
+        <div className="hover">
+          <div className="seccion1__div">
+            <img src={img2} alt="" />
+            <div>
+              <p>Potentes integraciones</p>
+              <p>para administración de TI</p>
+            </div>
+          </div>
+        </div>
+        <div className="hover">
+          <div className="seccion1__div">
+            <img src={img3} alt="" />
+            <div>
+              <p>Rapidos para una</p>
+              <p>mejor Automatización</p>
+            </div>
           </div>
         </div>
       </div>
+
+
+
       <div className="seccion_1">
-        <div className="seccion1__div">
-          <img src={img4} alt="" />
-          <div>
-            <p>Amplias capacidades</p>
-            <p>de informes</p>
+          <div className="hover">
+            <div className="seccion1__div">
+              <img src={img4} alt="" />
+              <div>
+                <p>Amplias capacidades</p>
+                <p>de informes</p>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="seccion1__div">
-          <img src={img5} alt="" />
-          <div >
-            <p>Personalizaciones</p>
-         
+          <div className="hover">
+            <div className="seccion1__div">
+              <img src={img5} alt="" />
+              <div>
+                <p>Personalizaciones</p>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="seccion1__div">
-          <img src={img6} alt="" />
-          <div>
-            <p>Implementación en </p>
-            <p>la nube</p>
+          <div className="hover">
+            <div className="seccion1__div">
+              <img src={img6} alt="" />
+              <div>
+                <p>Implementación en </p>
+                <p>la nube</p>
+              </div>
           </div>
-        </div>
+          </div>
       </div>
+
+      
     </div>
+    <InformacionAdicional />
+    <br />
+    
+    <Footer />
+
   </>
 );
 export default bodyInicio;

@@ -8,8 +8,6 @@ const MenuPrincipal = () => {
     console.log("Hola");
   };
 
-
-
   return (
     <>
       <div className="contenedor">
