@@ -33,7 +33,7 @@ const Listado = () => {
     
       ]
 
-
+console.log("DEtalke")
 
     return(
         <>
