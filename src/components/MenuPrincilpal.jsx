@@ -41,7 +41,7 @@ const MenuPrincipal = () => {
           </div>
         </div>
       </div>
-      <Registro />
+      {/* <Registro /> */}
       <Home />
     </>
   );
