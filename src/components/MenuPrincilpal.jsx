@@ -1,3 +1,4 @@
+import Detalle from "../views/Detalle/detalle"
 import imgMenu from "../templates/img/menu-img.jpg";
 import menuLogo from "../templates/img/data.jpg";
 import Hor from "../views/home/inicio" 
@@ -33,19 +34,10 @@ return (
         </div>
 
 
+
       </div>
-      <Hor />
-     <Hor />
-     <Hor />
-     <Hor />
-     <Hor />
-     <Hor />
-     <Hor />
-     <Hor />
-     <Hor />
-     <Hor />
-     <Hor />
-     <Hor />
+      <Detalle/>
+    
      
 
     </>
