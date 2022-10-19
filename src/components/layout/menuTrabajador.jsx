@@ -1,6 +1,6 @@
 import { Link, Route,Routes } from "react-router-dom";
 import "../../App.css";
-
+import Listado from "../../views/listadoTablas/listadoAccion";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
@@ -43,7 +43,7 @@ const LayoutPanelDeControl = () => {
           </div>
         </header>
       </div>
-
+      <Listado />
     </>
   );
 };
