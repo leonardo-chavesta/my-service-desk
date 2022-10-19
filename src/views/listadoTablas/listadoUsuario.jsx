@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import ReactTable from "../../components/ReactTable/ReactTable"
     const Listado = () => {
 
@@ -44,56 +43,6 @@ import ReactTable from "../../components/ReactTable/ReactTable"
 
 
         );
-=======
-
-import ReactTable from "../../components/ReactTable/reactTable";
-
-const Listado = () => {
-  
-      const COLUMNAS = [
-        {
-          Header: 'Nombre',
-          accessor: 'name',
-        },
-        {
-          Header: 'Apellido',
-          accessor: 'apellido',
-        },
-        {
-          Header: 'Edad',
-          accessor: 'edad',
-        },
-      ]
-
-      const listadoTablas = [
-        {name:"leonardo", apellido:"chavesta", edad:23},
-        {name:"leonardo", apellido:"chavesta", edad:23},
-        {name:"leonardo", apellido:"chavesta", edad:23},
-        {name:"leonardo", apellido:"chavesta", edad:23},
-        {name:"leonardo", apellido:"chavesta", edad:23},
-        {name:"leonardo", apellido:"chavesta", edad:23},
-        {name:"leonardo", apellido:"chavesta", edad:23},
-        {name:"leonardo", apellido:"chavesta", edad:23},
-        {name:"leonardo", apellido:"chavesta", edad:23},
-        {name:"leonardo", apellido:"chavesta", edad:23},
-        {name:"leonardo", apellido:"chavesta", edad:23},
-    
-      ]
-
-console.log("DEtalke")
-
-    return(
-        <>
-        
-        <ReactTable 
-        
-        columns={COLUMNAS}
-        data={listadoTablas || []}
-        
-        />
-        </>
-    );
->>>>>>> 631adb88a4241e4ca3a243bdcb65337a8bbe12b7
 }
         
 
