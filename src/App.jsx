@@ -11,9 +11,9 @@ function App() {
 
   return (
     <>
-      <Routes>
-        <Route path='*' element={<MenuPrincipal />} />
-        <Route path="/login/*" element={<LayoutPanelDeControl />} />
+      <Routes>*
+        <Route path='/*' element={<MenuPrincipal />} />
+        <Route path="/login/" element={<LayoutPanelDeControl />} />
       </Routes>
       
     </>
