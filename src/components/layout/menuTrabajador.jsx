@@ -1,19 +1,14 @@
 import { Link, Route,Routes } from "react-router-dom";
 import "../../App.css";
 import Listado from "../../views/listadoTablas/listadoUsuario";
-import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Detalle from "../../views/Detalle/detalle"
+import Registro from "../../views/registro/registro";
 
 const LayoutPanelDeControl = () => {
-
-
-
-
   return (
     <>
     <Navbar className=" py-9 px-20  " bg="light" expand="lg">
@@ -47,9 +42,9 @@ const LayoutPanelDeControl = () => {
           </div>
         </header>
       </div>
-
-
       <Listado />
+       <Detalle/>
+     <Registro />
     </>
   );
 };

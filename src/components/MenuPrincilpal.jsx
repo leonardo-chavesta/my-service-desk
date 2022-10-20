@@ -1,11 +1,8 @@
 
 import Detalle from "../views/Detalle/detalle"
-import imgMenu from "../templates/img/menu-img.jpg";
-import menuLogo from "../templates/img/data.jpg";
-import Hor from "../views/home/inicio" 
 import "../templates/styles/nav.css";
 import Registro from "../views/registro/registro";
-import Home from "../views/home/home";
+import Home from '../views/home/home'
 import { Route, Link, Routes, NavLink, useParams } from "react-router-dom";
 import { Button } from "react-bootstrap";
 
@@ -47,9 +44,7 @@ const MenuPrincipal = () => {
         </div>
 
       </div>
-      <Detalle/>
-      </div>
-      <Registro />
+
       <Home />
 
     </>
