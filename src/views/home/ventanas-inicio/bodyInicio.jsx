@@ -26,7 +26,6 @@ const bodyInicio = () => (
     </div>
 
     <h1 className="container_h2_body">
-      {" "}
       Construido para potenciar su Service desk de TI
     </h1>
 
