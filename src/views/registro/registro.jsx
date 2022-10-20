@@ -9,18 +9,18 @@ const Registro = () =>{
       <div className="container-sm">
         <><div className="col-lg-6 bg-indigo text-white ">
         <div className="p-5">
-          <h3 className="fw-normal mb-5 text-center">Detalles de contactos</h3>
+         
           <div className="mb-4 pb-2">
             <div className="form-outline form-white">
               <input type="text" id="form3Examplea3" className="form-control form-control-lg" />
-              <label className="form-label" for="form3Examplea3">Nombres</label>
+              <label className="form-label" for="form3Examplea3"> Apellidos y Nombres </label>
             </div>
           </div>
           <div className="row">
             <div className="mb-4 pb-2">
               <div className="form-outline form-white ">
                 <input type="text" id="form3Examplea5" className="form-control form-control-lg" />
-                <label className="form-label" for="form3Examplea5">Apellidos<noscript></noscript></label>
+                <label className="form-label" for="form3Examplea5">Nombre De la Empresa<noscript></noscript></label>
               </div>
             </div>
           </div>
@@ -56,13 +56,6 @@ const Registro = () =>{
               <input type="text" id="form3Examplea9" className="form-control form-control-lg" />
               <label className="form-label" for="form3Examplea9">@email</label>
             </div>
-          </div>
-
-          <div className="form-check d-flex justify-content-start mb-4 pb-3">
-            <input className="form-check-input me-3" type="checkbox" value="" id="form2Example3c" />
-            <label className="form-check-label text-white">
-              Acepto los <a href="#!" className="text-white"><u>terminos y condiciones</u></a> del sitio.
-            </label>
           </div>
           <div className='d-grid'>
           <button type="button" className="btn btn-secondary btn-lg"

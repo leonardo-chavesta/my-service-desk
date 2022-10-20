@@ -2,7 +2,7 @@
 import Detalle from "../views/Detalle/detalle"
 import "../templates/styles/nav.css";
 import Registro from "../views/registro/registro";
-import Home from "../views/home/home";
+import Home from '../views/home/home'
 import { Route, Link, Routes, NavLink, useParams } from "react-router-dom";
 import { Button } from "react-bootstrap";
 
@@ -35,7 +35,7 @@ const MenuPrincipal = () => {
               <li>
                 <Link to="/login">
                   <Button variant="danger" active >
-                    Login
+                    Login Servicio
                   </Button>
                 </Link>
               </li>
@@ -44,7 +44,13 @@ const MenuPrincipal = () => {
         </div>
 
       </div>
+<<<<<<< HEAD
   
+=======
+
+      <Home />
+
+>>>>>>> estructura-pagina
     </>
   );
 };
