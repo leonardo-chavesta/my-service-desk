@@ -3,7 +3,7 @@ import { useTable, usePagination, useFilters } from 'react-table';
 import Table from 'react-bootstrap/Table';
 import Pagination from 'react-bootstrap/Pagination';
 import FormSelect from 'react-bootstrap/FormSelect';
-import ColumnFilter from './ColumnFiltre';
+import ColumnFilter from './ColumnFilter';
 
 const ReactTable = ({ columns, data }) => {
 	const [currentData, setCurrentData] = useState([]);
