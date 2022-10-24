@@ -44,13 +44,9 @@ const MenuPrincipal = () => {
         </div>
 
       </div>
-<<<<<<< HEAD
-  
-=======
 
       <Home />
 
->>>>>>> estructura-pagina
     </>
   );
 };
