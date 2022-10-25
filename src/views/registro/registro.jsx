@@ -37,7 +37,7 @@ const Registro = () =>{
 
               <div className="form-outline form-white">
                 <input type="text" id="form3Examplea7" className="form-control form-control-lg" />
-                <label className="form-label" for="form3Examplea7">Dirreción</label>
+                <label className="form-label" for="form3Examplea7">Dirección</label>
               </div>
 
             </div>
