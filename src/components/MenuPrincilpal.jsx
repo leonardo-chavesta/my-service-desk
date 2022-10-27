@@ -27,7 +27,7 @@ const MenuPrincipal = () => {
                 <Link to="">Inicio</Link>
               </li>
               <li>
-                <NavLink to="/usuario">Acerca De Nosotros</NavLink>
+                <NavLink >Acerca De Nosotros</NavLink>
               </li>
               <li>
                 <a>Servicios</a>

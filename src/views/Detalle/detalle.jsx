@@ -1,9 +1,80 @@
-import form from "react-bootstrap/Form";
 import { Row, Col, Form, Card } from "react-bootstrap";
 import "../../App.css";
 import Button from "react-bootstrap/Button";
+import * as ApisServer from '../../services/apis/ApisServer' 
+import { useState , useEffect} from "react";
+import { useFormik } from "formik";
+import { createIncidencia } from "../../services/apis/ApisServer";
+import Select from "react-select";
+import { toastme } from 'toastmejs';
+import { swalAlertOk , swalAlertInfo} from "../../utils/alertSwa";
+
 
 const Detalle = () => {
+
+
+  
+  const [tecnico, setTecnico] = useState([])
+  const [prioridad, setPrioridad] = useState([])
+  const [producto, setProducto] = useState([])
+
+  const dataListTecnico = async () => {
+    try {
+      setTecnico(await ApisServer.useGetListadoTecnico())
+      setPrioridad(await ApisServer.useGetListadoPrioridad())
+      setProducto(await ApisServer.useGetlistadoProductos())
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+
+  useEffect(()=>{
+    dataListTecnico();
+  },[])
+
+
+  // datos guardar 
+  const formik = useFormik({
+    enableReinitialize: true,
+    initialValues:{
+      nombre:'',
+
+      producto:null,
+      tecnico:null,
+      prioridad:null,
+      correo: '', 
+      numero: '',
+      reporte:'',
+    },
+    onSubmit : values => handleSave({...values})
+  })
+
+  const handleSave = async (values)  => {
+    const valores = {
+      nombre:values.nombre,
+      producto_Id:values.producto.id,
+      tecnico_Id:values.tecnico.id,
+      prioridad_Id:values.prioridad.id,
+      correo: values.correo, 
+      numero: values.numero,
+      reporte:values.reporte,
+    }
+    createIncidencia(valores)
+    if(formik.values.nombre === '' ||  formik.values.correo === '' || formik.values.producto === null){
+      await swalAlertInfo('Error a llenar todos los campos', 'Mensaje', 'Cerrar');
+    }else{
+      await swalAlertOk('Guardarde Cambios', 'Mensaje', 'Cerrar');
+    }  
+  }
+   
+  useEffect(()=>{
+    if(formik.onSubmit === true){
+      formik.resetForm()
+    }
+  },[])
+
+
   return (
     <>
       <Row>
@@ -15,32 +86,21 @@ const Detalle = () => {
               </label>
             </Card.Header>
             <Card.Body>
+              <Form onSubmit={formik.handleSubmit}>
               <Row className="g-3">
                 <Col xs={12} sm={8} md={8} lg={5}>
                   <Row>
                     <Col xs={12} sm={6} md={6} lg={6} xxl={6}>
-                      <Form.Label>
-                        Nombre:
-                      </Form.Label>
-                      <Form.Control
-                        size="sm"
-                        name="nombre"
-                        type="text"
-                      />
+                      <Form.Label>Nombre:</Form.Label>
+                      <Form.Control size="sm" name="nombre" values={formik.values?.nombre} onChange={formik.handleChange} type="text" />
                     </Col>
                   </Row>
                 </Col>
                 <Col xs={12} sm={8} md={9} lg={5}>
                   <Row>
                     <Col xs={12} sm={6} md={6} lg={6} xxl={6}>
-                      <Form.Label>
-                        Numero:
-                      </Form.Label>
-                      <Form.Control
-                        size="sm"
-                        name="nombre"
-                        type="text"
-                      />
+                      <Form.Label>Numero: </Form.Label>
+                      <Form.Control size="sm" name="numero" values={formik.values?.numero} onChange={formik.handleChange} type="text" />
                     </Col>
                   </Row>
                 </Col>
@@ -52,8 +112,10 @@ const Detalle = () => {
                       </Form.Label>
                       <Form.Control
                         size="sm"
-                        name="nombre"
+                        name="correo"
                         type="text"
+                        values={formik.values?.correo} 
+                        onChange={formik.handleChange}
                       />
                     </Col>
                   </Row>
@@ -62,13 +124,20 @@ const Detalle = () => {
                   <Row>
                     <Col xs={12} sm={6} md={6} lg={6} xxl={6}>
                       <Form.Label>
-                        Prirodad:
+                        Priodad:
                       </Form.Label>
-                      <Form.Select >
-                        <option value="1">Alto</option>
-                        <option value="2">Medio</option>
-                        <option value="3">Alto</option>
-                      </Form.Select>
+                      <Select
+								        name='prioridad'
+								        options={prioridad}
+                        values={formik.values.prioridad}
+								        onChange={(option, target) =>
+								        	formik.setFieldValue(target.name, option)
+								        }
+								        getOptionValue={option => option.id}
+								        getOptionLabel={option => option.estado}
+								        
+							        />        
+                     
                     </Col>
                   </Row>
                 </Col>
@@ -78,11 +147,37 @@ const Detalle = () => {
                       <Form.Label>
                         Tecnico Asignado:
                       </Form.Label>
-                      <Form.Select >
-                        <option value="1">Jose Martines</option>
-                        <option value="2">Abel Palomino</option>
-                        <option value="3">Ricardo Mendoza</option>
-                      </Form.Select>
+                      <Select
+								        name='tecnico'
+								        options={tecnico}
+                        values={formik.values.tecnico}
+								        onChange={(option, target) =>
+								        	formik.setFieldValue(target.name, option)
+								        }
+								        getOptionValue={option => option.id}
+								        getOptionLabel={option => option.nombre}
+								        
+							        /> 
+                    </Col>
+                  </Row>
+                </Col>
+                <Col xs={12} sm={8} md={9} lg={5}>
+                  <Row>
+                    <Col xs={12} sm={6} md={6} lg={6} xxl={6}>
+                      <Form.Label>
+                        Producto:
+                      </Form.Label>
+                      <Select
+								        name='producto'
+								        options={producto}
+                        values={formik.values.producto}
+								        onChange={(option, target) =>
+								        	formik.setFieldValue(target.name, option)
+								        }
+								        getOptionValue={option => option.id}
+								        getOptionLabel={option => option.nombre}
+								        
+							        /> 
                     </Col>
                   </Row>
                 </Col>
@@ -92,16 +187,21 @@ const Detalle = () => {
                       <Form.Label>
                         Estado de Incidencia:
                       </Form.Label>
-                      <Form.Select >
-                        <option value="1">Pendiente</option>
-                        <option value="2">Desarrollo</option>
-                        <option value="3">Curso</option>
-                        <option value="3">Culminado</option>
-                      </Form.Select>
+                      <Select
+								        name='producto'
+								        options={producto}
+                        values={formik.values.producto}
+								        onChange={(option, target) =>
+								        	formik.setFieldValue(target.name, option)
+								        }
+								        getOptionValue={option => option.id}
+								        getOptionLabel={option => option.nombre}
+								        
+							        /> 
                     </Col>
                   </Row>
                 </Col>
-                <Col xs={12} sm={8} md={8} lg={5}>
+                <Col xs={12} sm={8} md={8} lg={7}>
                   <Row>
                     <Col xs={12} sm={6} md={6} lg={6} xxl={10}>
                       <Form.Label>
@@ -109,25 +209,28 @@ const Detalle = () => {
                       </Form.Label>
                       <Form.Control
                         size="sm"
-                        name="nombre"
+                        name="reporte"
                         as="textarea"
+                        values={formik.values?.reporte} onChange={formik.handleChange}
                         rows={3}
                       />
                     </Col>
                   </Row>
                 </Col>
 
-                <Col xs={12} sm={8} md={8} lg={5}>
+                <Col xs={12} sm={8} md={8} lg={8}>
                   <br />
                   <Row>
-                    <Col xs={12} sm={6} md={6} lg={6} xxl={6}>
-                      <Button variant="danger" active size="lg">Generar Incidencia</Button>{' '}
+                    <Col xs={8} sm={6} md={6} lg={6} xxl={6}>
+                      <Button variant="danger" type="submit" active size="lg">Generar Incidencia</Button>{' '}
                     </Col>
                   </Row>
                 </Col>
           
               </Row>
+            </Form>
             </Card.Body>
+            
           </Card>
         </Col>
       </Row>

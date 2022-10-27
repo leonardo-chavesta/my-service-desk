@@ -2,9 +2,9 @@
     background-image: url('/src/templates/img/data.jpg');
     background-position: center center;
 }
-.cityimg {
-   width: 80px;
-   height: 100px; 
+.rounded {
+   width: 550px;
+   height: 700px; 
 }
 .fw-bold{
     font-size: 30px;
