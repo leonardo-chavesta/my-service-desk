@@ -13,7 +13,7 @@ const ventanaPrincipal = () => (
         <h2>Service Desk de TI exitosos</h2>
         <p>Soporte a los ususarios empoder a los técnicos</p>
         <div className="container__botones">
-          <Link to='register' >
+          {/* <Link to='register' >
           <Button
             variant="danger"
             size="lg"
@@ -21,7 +21,7 @@ const ventanaPrincipal = () => (
             active
           >
             Registrarse
-          </Button></Link>
+          </Button></Link> */}
 
         </div>
       </div>
